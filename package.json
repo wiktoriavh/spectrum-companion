@@ -6,15 +6,17 @@
   "author": "Wiktoria Mielcarek <w.mielcarek@braweria.de>",
   "license": "MIT",
   "private": false,
+  "type": "module",
   "scripts": {
     "build": "node esbuild.js"
   },
   "devDependencies": {
     "eslint": "^8.11.0",
     "eslint-config-galex": "^3.6.5",
-    "obsidian": "https://github.com/obsidianmd/obsidian-api/tarball/master"
+    "obsidian": "latest"
   },
   "dependencies": {
+    "dotenv": "^16.0.0",
     "esbuild": "^0.14.25",
     "typescript": "^4.6.2"
   }

@@ -891,6 +891,11 @@ dom-accessibility-api@^0.5.9:
   resolved "https://registry.yarnpkg.com/dom-accessibility-api/-/dom-accessibility-api-0.5.13.tgz#102ee5f25eacce09bdf1cfa5a298f86da473be4b"
   integrity sha512-R305kwb5CcMDIpSHUnLyIAp7SrSPBx6F0VfQFB3M75xVMHhXJJIdePYgbPPh1o57vCHNu5QztokWUPsLjWzFqw==
 
+dotenv@^16.0.0:
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.0.tgz#c619001253be89ebb638d027b609c75c26e47411"
+  integrity sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==
+
 electron-to-chromium@^1.4.76:
   version "1.4.82"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.82.tgz#51e123ca434b1eba8c434ece2b54f095b304a651"
@@ -2014,9 +2019,10 @@ object.values@^1.1.5:
     define-properties "^1.1.3"
     es-abstract "^1.19.1"
 
-"obsidian@https://github.com/obsidianmd/obsidian-api/tarball/master":
+obsidian@latest:
   version "0.13.30"
-  resolved "https://github.com/obsidianmd/obsidian-api/tarball/master#23888949f2b3b55f758adf6bb5bd691c64877ba8"
+  resolved "https://registry.yarnpkg.com/obsidian/-/obsidian-0.13.30.tgz#215697376c5c0059d7661df400440d97224d3f95"
+  integrity sha512-uAOrIyeHE9qYzg1Qjfpy/qlyLUFX9oyKWeHYO8NVDoI+pm5VUTMe7XWcsXPwb9iVsVmggVJcdV15Vqm9bljhxQ==
   dependencies:
     "@codemirror/state" "^0.19.6"
     "@codemirror/view" "^0.19.31"
