@@ -1,4 +1,4 @@
-import type { App } from "obsidian";
+import type { App, PluginManifest } from "obsidian";
 import { Plugin, PluginSettingTab } from "obsidian";
 
 import { CommandGenerator } from "./CommandGenerator";
@@ -12,8 +12,12 @@ export default class SpectrumCompanion extends Plugin {
 
   public generator: CommandGenerator;
 
-  public async onload(): Promise<void> {
+  public constructor(app: App, plugin: PluginManifest) {
+    super(app, plugin);
     this.generator = new CommandGenerator(this);
+  }
+
+  public async onload(): Promise<void> {
     await this.loadSettings();
 
     this.addSettingTab(new SpectrumSettingTab(this.app, this));
