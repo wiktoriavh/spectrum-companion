@@ -1,0 +1,10 @@
+{
+  "id": "spectrum-companion",
+  "name": "Spectrum Companion",
+  "version": "1.0.0",
+  "minAppVersion": "0.12.7",
+  "description": "Companion Plugin for the Spectrum Theme",
+  "author": "Wiktoria Mielcarek",
+  "authorUrl": "https://github.com/braweria",
+  "isDesktopOnly": true
+}
