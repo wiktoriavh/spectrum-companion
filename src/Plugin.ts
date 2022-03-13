@@ -1,9 +1,9 @@
 import type { App, PluginManifest } from "obsidian";
-import { Plugin, PluginSettingTab } from "obsidian";
+import { Plugin } from "obsidian";
 
 import { CommandGenerator } from "./CommandGenerator";
 import { SpectrumSettingTab } from "./Settings";
-import { defaultSettings, schemes, schemeSettings } from "./consts";
+import { defaultSettings, schemes } from "./consts";
 import type { PluginSettings, PluginKeys } from "./types";
 
 // eslint-disable-next-line import/no-default-export
@@ -59,24 +59,3 @@ export default class SpectrumCompanion extends Plugin {
     this.checkForUpdate(key);
   }
 }
-
-// class SpectrumSettingTab extends PluginSettingTab {
-//   public plugin: SpectrumCompanion;
-
-//   public generator;
-
-//   public constructor(app: App, plugin: SpectrumCompanion) {
-//     super(app, plugin);
-//     this.plugin = plugin;
-//     this.generator = new SettingGenerator(this.plugin);
-//   }
-
-//   public display() {
-//     const { containerEl, generator } = this;
-
-//     containerEl.empty();
-//     containerEl.createEl("h3", { text: "Spectrum Theme Settings" });
-
-//     generator.generateSettings(schemeSettings, "dropdown", containerEl);
-//   }
-// }
