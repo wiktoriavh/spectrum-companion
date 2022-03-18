@@ -14,7 +14,11 @@ export class CommandGenerator {
     return {
       ...options,
       callback: () => {
-        this.plugin.changeSettingProperty(key, options.id);
+        if (key === "side-docks") {
+          this.plugin.changeSettingProperty(key, !this.plugin.settings[key]);
+        } else {
+          this.plugin.changeSettingProperty(key, options.id);
+        }
       },
     };
   }
