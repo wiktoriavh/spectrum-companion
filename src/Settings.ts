@@ -3,7 +3,7 @@ import { PluginSettingTab } from "obsidian";
 
 import type SpectrumCompanion from "./Plugin";
 import { SettingGenerator } from "./SettingGenerator";
-import { schemeSettings } from "./consts";
+import { customSettings } from "./consts";
 
 export class SpectrumSettingTab extends PluginSettingTab {
   public plugin: SpectrumCompanion;
@@ -22,6 +22,6 @@ export class SpectrumSettingTab extends PluginSettingTab {
     containerEl.empty();
     containerEl.createEl("h3", { text: "Spectrum Theme Settings" });
 
-    generator.generateSettings(schemeSettings, "dropdown", containerEl);
+    generator.generateSettings(customSettings, containerEl);
   }
 }
