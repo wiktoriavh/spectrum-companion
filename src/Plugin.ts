@@ -23,10 +23,17 @@ export default class SpectrumCompanion extends Plugin {
     this.addSettingTab(new SpectrumSettingTab(this.app, this));
 
     this.generator.generateCommands(commands);
+
+    this.updateScheme();
   }
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  public onunload(): void {} // EMPTY
+  public onunload(): void {
+    // remove Spectrum Class Names
+    schemes.forEach((scheme) => {
+      document.body.classList.remove(scheme.id);
+    });
+  }
 
   public async loadSettings(): Promise<void> {
     this.settings = { ...defaultSettings, ...(await this.loadData()) };
