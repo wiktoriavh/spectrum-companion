@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import esbuild from "esbuild";
 import path from "path";
 import process from "process";
+import postcss from "esbuild-postcss";
 
 dotenv.config();
 
@@ -22,25 +23,24 @@ const outSettings = buildSettings.production
   ? { outfile: "main.js" }
   : { outdir: testingVaultPath, outbase: "." };
 
-const entrySettings = buildSettings.production
-  ? [process.env.ENTRY_FILE]
-  : {
-      main: process.env.ENTRY_FILE,
-      styles: "styles.css",
-    };
+const entrySettings = {
+  main: process.env.ENTRY_FILE,
+  styles: "src/styles.css",
+};
 
 esbuild
   .build({
     entryPoints: entrySettings,
     bundle: true,
-    minify: buildSettings.production,
+    minify: true, //buildSettings.production,
     external: ["obsidian"],
-    format: "cjs",
+    // format: "cjs",
     watch: !buildSettings.production,
     target: "es2016",
     logLevel: "info",
     sourcemap: buildSettings.production ? false : "inline",
     treeShaking: true,
+    plugins: [postcss()],
     ...outSettings,
   })
   // eslint-disable-next-line unicorn/no-process-exit

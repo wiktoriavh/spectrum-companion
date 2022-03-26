@@ -12,9 +12,12 @@
     "dev": "node esbuild.js development"
   },
   "devDependencies": {
+    "esbuild-postcss": "^0.0.4",
     "eslint": "^8.11.0",
     "eslint-config-galex": "^3.6.5",
-    "obsidian": "latest"
+    "obsidian": "latest",
+    "postcss": "^8.4.12",
+    "postcss-minify": "^1.1.0"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
