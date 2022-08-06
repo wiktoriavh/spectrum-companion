@@ -40,6 +40,7 @@ esbuild
     logLevel: "info",
     sourcemap: buildSettings.production ? false : "inline",
     treeShaking: true,
+    // verbatimWhitespace: true,
     plugins: [postcss()],
     ...outSettings,
   })
